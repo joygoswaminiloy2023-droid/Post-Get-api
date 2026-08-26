@@ -79,3 +79,12 @@ app.get("/posts/:id", (req, res) => {
 
   return res.status(200).json(post);
 });
+
+
+app.use((req, res) => {
+  res.status(404).json({ error: "Route not found" });
+});
+
+app.listen(PORT, () => {
+  console.log(`Blog Post API running at http://localhost:${PORT}`);
+});
