@@ -553,6 +553,21 @@ The API successfully returns the available blog posts.
 ---
 
 
+# 🚀 GitHub Repository & API Testing
+
+The project was successfully pushed to GitHub, and the API can be tested locally from the browser.
+
+The screenshot below shows:
+
+- The project opened in VS Code
+- The `git push` command completed successfully
+- The remote GitHub repository
+- The API response from `GET /posts`
+
+![GitHub Push and API Testing](assets/github-push-and-api-test.png)
+
+---
+
 # 💻 Development / Server Running
 
 The API can also be run directly from the VS Code terminal using Node.js.
