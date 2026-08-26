@@ -540,7 +540,7 @@ The basic request flow looks like this:
 
 The API successfully returns a single blog post by its ID.
 
-![GET Post by ID](assets/Screenshot(1458).png.png)
+![GET Post by ID](assetes/Screenshot(1458).png)
 
 ---
 
