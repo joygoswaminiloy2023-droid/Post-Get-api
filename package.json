@@ -1,0 +1,12 @@
+{
+  "name": "blog-post-api",
+  "version": "1.0.0",
+  "description": "Simple Blog Post API built with Express.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
