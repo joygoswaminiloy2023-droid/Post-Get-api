@@ -548,7 +548,7 @@ The API successfully returns a single blog post by its ID.
 
 The API successfully returns the available blog posts.
 
-![GET All Posts](screenshots/get-all-posts.png)
+![GET All Posts](assets/post.png)
 
 ---
 
@@ -564,7 +564,7 @@ The screenshot below shows:
 - The remote GitHub repository
 - The API response from `GET /posts`
 
-![GitHub Push and API Testing](assets/github-push-and-api-test.png)
+![GitHub Push and API Testing](assets/post_1.png)
 
 ---
 
