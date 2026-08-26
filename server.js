@@ -55,10 +55,27 @@ app.post("/posts", (req, res) => {
   });
 });
 
-// ---- GET /posts — Retrieve all blog posts ----
+
 app.get("/posts", (req, res) => {
   return res.status(200).json({
     count: posts.length,
     posts,
   });
+});
+
+
+app.get("/posts/:id", (req, res) => {
+  const id = Number(req.params.id);
+
+  if (!Number.isInteger(id)) {
+    return res.status(400).json({ error: "Post ID must be a valid integer" });
+  }
+
+  const post = posts.find((p) => p.id === id);
+
+  if (!post) {
+    return res.status(404).json({ error: `Blog post with ID ${id} not found` });
+  }
+
+  return res.status(200).json(post);
 });
