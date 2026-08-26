@@ -26,3 +26,39 @@ function validatePost({ title, content, author }) {
 
   return errors;
 }
+
+app.post("/posts", (req, res) => {
+  const { title, content, author } = req.body || {};
+
+  const errors = validatePost({ title, content, author });
+
+  if (errors.length > 0) {
+    return res.status(400).json({
+      error: "Validation failed",
+      details: errors,
+    });
+  }
+
+  const newPost = {
+    id: nextId++,
+    title: title.trim(),
+    content: content.trim(),
+    author: author.trim(),
+    createdAt: new Date().toISOString(),
+  };
+
+  posts.push(newPost);
+
+  return res.status(201).json({
+    message: "Blog post created successfully",
+    post: newPost,
+  });
+});
+
+// ---- GET /posts — Retrieve all blog posts ----
+app.get("/posts", (req, res) => {
+  return res.status(200).json({
+    count: posts.length,
+    posts,
+  });
+});
